@@ -1,0 +1,30 @@
+Buổi 1:
+- Cài đặt dự án Yii
+- Download composer
+- Lệnh tạo dự án: composer create-project yiisoft/yii2-app-basic project_name
+Buổi 2:
+- Mô hình MVC trong Yii
+- Tạo controller và view
+Buổi 3:
+- Tạo model
+- Sử dụng OOP để viết class và gọi ở bên controller
+Buổi 4:
+- Tạo đường dẫn thân thiện UrlFriendly trong config/web.php
+- Bật đoạn code này
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [],
+            ],
+Buổi 5:
+- Tạo layout và kế thừa
+Buổi 6:
+- Sử dụng Gii tạo controller,model,view
+Buổi 7:
+- Làm việc với database trong Yii
+Buổi 8:
+- Dự án thực tế làm chức năng login user
+Buổi 9:
+- Xóa file web để trỏ về tên miền gốc
+Buổi 10:
+- Cách tạo module admin trong Yii

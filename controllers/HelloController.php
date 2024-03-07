@@ -10,6 +10,7 @@ use app\models\Hello;
 
 class HelloController extends Controller{
     public function actionIndex(){
+        $this->layout = 'mylayout'; // sử dụng layout custom
         return $this->render('index');
     }
     public function actionUser(){
