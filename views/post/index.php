@@ -7,8 +7,8 @@ use yii\helpers\Html;
 // var_dump($posts);
 ?>
 <h1>List Post</h1>
-<?php  if(Yii::$app->session->hasFlash('mess')): ?>
-        <div class="alert alert-success"><?php echo Yii::$app->session->getFlash('mess'); ?></div>
+<?php if (Yii::$app->session->hasFlash('mess')) : ?>
+    <div class="alert alert-success"><?php echo Yii::$app->session->getFlash('mess'); ?></div>
 <?php endif; ?>
 
 <?= Html::a('Create', ['/post/create'], ['class' => 'btn btn-primary mb-2']) ?>
@@ -31,9 +31,9 @@ use yii\helpers\Html;
                     <td><?= $post->description ?></td>
                     <td><?= $post->category_id ?></td>
                     <td>
-                        <a href="#" class="btn btn-primary">View</a>
-                        <a href="#" class="btn btn-warning">Update</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <?= Html::a('View', ['post/view', 'id' => $post->id], ['class' => 'badge badge-pill badge-primary']) ?>
+                        <?= Html::a('Update', ['post/update', 'id' => $post->id], ['class' => 'badge badge-pill badge-warning']) ?>
+                        <?= Html::a('Delete', ['post/delete', 'id' => $post->id], ['class' => 'badge badge-pill badge-danger']) ?>
                     </td>
                 </tr>
             <?php endforeach; ?>

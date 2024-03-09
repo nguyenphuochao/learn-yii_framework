@@ -5,9 +5,9 @@ namespace app\models;
 class Post extends \yii\db\ActiveRecord
 {
 
-    public $name;
-    public $description;
-    public $category_id;
+    private $name;
+    private $description;
+    private $category_id;
     
     public static function tableName()
     {
@@ -16,7 +16,8 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'description', 'category_id'], 'required']
+            [['name', 'description', 'category_id'], 'required'],
+            [['name'] , 'unique']
         ];
     }
 }

@@ -9,7 +9,7 @@ use yii\widgets\ActiveForm;
         color: red;
     }
 </style>
-<h1>Create Post</h1>
+<h1>Update Post</h1>
 <?php $form =  ActiveForm::begin() ?>
 <div class="form-group">
     <?= $form->field($post, 'name') ?>
@@ -29,7 +29,7 @@ use yii\widgets\ActiveForm;
     ?>
 </div>
 <div>
-    <?= Html::submitButton('Create', ['class' => 'btn btn-primary']) ?>
+    <?= Html::submitButton('Update', ['class' => 'btn btn-primary']) ?>
     <?= Html::a('Go back', ['/post'], ['class' => 'btn btn-warning']) ?>
 </div>
 <?php ActiveForm::end() ?>
